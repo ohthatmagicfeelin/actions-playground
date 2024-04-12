@@ -24,3 +24,6 @@ jobs:
 
       - name: Push to GHCR
         run: docker-compose push
+
+      - name: Pull
+        run: docker pull ghcr.io/ohthatmagicfeelin/actions-playground:latest
