@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.PAT }}
 
       - name: Build Image 
-        run: docker-compose build
+        run:  docker buildx bake --file docker-compose.yml --file docker-compose-cache.json
 
       - name: Push to GHCR
         run: docker-compose push
