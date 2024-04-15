@@ -4,6 +4,6 @@ services:
     image: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:latest
     build: 
       context: .
-      # cache_from: 
-      # - ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
+      cache_from: 
+      - ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
     # cahche_to: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
