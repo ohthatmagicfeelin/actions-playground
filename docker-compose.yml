@@ -1,5 +1,6 @@
 services:
   nginx:
-    build: .
     image: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:latest
-    
+    build: .
+    cache_from: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
+    cahche_to: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
