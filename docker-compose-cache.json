@@ -2,10 +2,10 @@
     "target": {
       "nginx": {
         "cache-from": [
-          "type=registry,ref=ghcr.io/ohtthatmagicfeelin/actions-playground/nginx:cache"
+          "type=registry,ref=ghcr.io/ohthatmagicfeelin/actions-playground/nginx:cache"
         ],
         "cache-to": [
-          "type=registry,ref=ghcr.io/ohtthatmagicfeelin/actions-playground/nginx:cache"
+          "type=registry,ref=ghcr.io/ohthatmagicfeelin/actions-playground/nginx:cache"
         ],
         "output": [
           "type=docker"
