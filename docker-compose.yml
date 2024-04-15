@@ -1,6 +1,9 @@
+version: '3.8'
 services:
   nginx:
     image: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:latest
-    build: .
-    cache_from: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
-    cahche_to: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
+    build: 
+      context: .
+      cache_from: 
+      - ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
+    # cahche_to: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
