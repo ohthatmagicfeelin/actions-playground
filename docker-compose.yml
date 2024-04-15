@@ -6,4 +6,5 @@ services:
       context: .
       cache_from: 
       - ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
-    # cahche_to: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
+      cache_to:
+      - ghcr.io/ohthatmagicfeelin/actions-playground/nginx:buildcache
