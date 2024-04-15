@@ -1,4 +1,4 @@
-
+version: "2.26"
 services:
   nginx:
     image: ghcr.io/ohthatmagicfeelin/actions-playground/nginx:latest
