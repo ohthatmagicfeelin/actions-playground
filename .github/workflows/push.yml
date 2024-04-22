@@ -48,7 +48,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 77.37.47.158
-          username: webapp-runner
+          username: ${{ vars.USERNAME }}
           port: ${{ vars.PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: |
