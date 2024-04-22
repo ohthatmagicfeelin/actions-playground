@@ -54,5 +54,5 @@ jobs:
           script: |
             docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.PAT }}
             cd /home/webapp-runner/app1
-            sudo docker compose -f ./docker-compose.prod.yml pull
+            sudo docker compose -f ./docker-compose.yml pull
       #       sudo docker compose -f ./docker-compose.prod.yml up -d
