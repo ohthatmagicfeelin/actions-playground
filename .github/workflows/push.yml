@@ -44,16 +44,15 @@ jobs:
           target: "/home/webapp-runner/app1"
 
 
-      # - name: Executing remote command
-      #   uses: appleboy/ssh-action@master
-      #   with:
-      #     host: ${{ vars.HOST }}
-      #     username: ${{ vars.USERNAME }}
-      #     port: ${{ vars.PORT }}
-      #     key: ${{ secrets.SSH_KEY }}
-      #     script: |
-      #         ls
-      #       docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.PAT }}
-      #       cd /home/webapp-runner/app1
-      #       sudo docker compose -f ./docker-compose.prod.yml pull
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ vars.HOST }}
+          username: ${{ vars.USERNAME }}
+          port: ${{ vars.PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.PAT }}
+            cd /home/webapp-runner/app1
+            sudo docker compose -f ./docker-compose.prod.yml pull
       #       sudo docker compose -f ./docker-compose.prod.yml up -d
