@@ -47,11 +47,10 @@ jobs:
       - name: Executing remote command
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ vars.HOST }}
-          username: ${{ vars.USERNAME }}
-          port: ${{ vars.PORT }}
+          host: 77.37.47.158
+          username: webapp-runner
+          port: 22
           key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
               ls
       #       docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.PAT }}
