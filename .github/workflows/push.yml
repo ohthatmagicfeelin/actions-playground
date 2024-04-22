@@ -51,6 +51,7 @@ jobs:
           username: ${{ vars.USERNAME }}
           port: ${{ vars.PORT }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
               ls
       #       docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.PAT }}
