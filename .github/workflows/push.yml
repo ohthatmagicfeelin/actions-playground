@@ -49,7 +49,7 @@ jobs:
         with:
           host: 77.37.47.158
           username: webapp-runner
-          port: 22
+          port: ${{ vars.PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: |
               ls
